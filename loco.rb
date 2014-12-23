@@ -36,6 +36,7 @@ module LOCO
           @padding, @readcnt, @makred, @highlight, @read, @visit,
           @dummy, @accessed = rawdata.unpack(
             'Z80Z80Z80ICCCCSSSSSa196a2006')
+          @accessed = @accessed.force_encoding('binary')
       end
 
       def serialize
